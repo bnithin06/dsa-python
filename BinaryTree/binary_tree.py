@@ -70,7 +70,7 @@ class BinaryTree:
 
     # Recursive functionn to handle in-order traversal
     def in_order(self):
-        self._in_order(self,self.root)
+        self._in_order(self.root)
 
     def _in_order(self,current):
         if current is None:
@@ -116,15 +116,21 @@ bst.insert(13)
 bst.insert(4)
 
 # Perform pre-order traversal to print the nodes in pre-order sequence
+print('pre_order Traversal')
 bst.pre_order()  
-print()
+print('\n-----')
+
 
 # Perform post-order traversal to print the nodes in post-order sequence
+print('post_order Traversal')
 bst.post_order()
-print()
+print('\n-----')
 
 #  Perform In-order traversal to print the nodes in In-order sequence
 #  the nodes are present in sorted order
+print('In_order Traversal')
+bst.in_order()
+print('\n-----')
 
 
 # Perform some search operations to check if specific values exist in the tree
