@@ -68,6 +68,18 @@ class BinaryTree:
         # Visit current node last (root)
         print(current.data, end=' ')
 
+    # Recursive functionn to handle in-order traversal
+    def in_order(self):
+        self._in_order(self,self.root)
+
+    def _in_order(self,current):
+        if current is None:
+            return
+        self._in_order(current.left)
+        print(current.data,end=' ')
+        self._in_order(current.right)
+    
+
     # Search for a specific value in the binary tree
     def search(self, Target):
        self._search(self.root, Target)   # Start search from the root
@@ -110,6 +122,10 @@ print()
 # Perform post-order traversal to print the nodes in post-order sequence
 bst.post_order()
 print()
+
+#  Perform In-order traversal to print the nodes in In-order sequence
+#  the nodes are present in sorted order
+
 
 # Perform some search operations to check if specific values exist in the tree
 bst.search(45)   # Should print True
